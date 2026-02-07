@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduPro Teacher's Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @layer base {
+            :root {
+                --primary-hue: 221.2;
+                --primary-saturation: 83.2%;
+                --filter-brightness: 100%;
+            }
+            html {
+                -webkit-filter: brightness(var(--filter-brightness));
+                filter: brightness(var(--filter-brightness));
+            }
+        }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: `hsl(var(--primary-hue), var(--primary-saturation), 95%)`,
+                100: `hsl(var(--primary-hue), var(--primary-saturation), 90%)`,
+                200: `hsl(var(--primary-hue), var(--primary-saturation), 80%)`,
+                300: `hsl(var(--primary-hue), var(--primary-saturation), 70%)`,
+                400: `hsl(var(--primary-hue), var(--primary-saturation), 60%)`,
+                500: `hsl(var(--primary-hue), var(--primary-saturation), 53%)`,
+                600: `hsl(var(--primary-hue), var(--primary-saturation), 48%)`,
+                700: `hsl(var(--primary-hue), var(--primary-saturation), 42%)`,
+                800: `hsl(var(--primary-hue), var(--primary-saturation), 36%)`,
+                900: `hsl(var(--primary-hue), var(--primary-saturation), 31%)`,
+                DEFAULT: `hsl(var(--primary-hue), var(--primary-saturation), 53%)`
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react-dom": "https://esm.sh/react-dom@^19.2.4",
+    "@google/genai": "https://esm.sh/@google/genai@^1.39.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "recharts": "https://esm.sh/recharts@^3.7.0",
+    "date-fns": "https://esm.sh/date-fns@^4.1.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
+    "date-fns/": "https://esm.sh/date-fns@^4.1.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gray-50 dark:bg-gray-900">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
